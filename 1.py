@@ -15,4 +15,5 @@ with open('magicaPotions.csv', 'w', encoding='UTF-8') as fo:
     for i in sl:
         answer = ','.join([str(i), str(sl[i])])
         print(answer, file=fo)
+print(f'Общее кол-во всех трав {sum(sl.values())}')
 #Вписываю ответ
