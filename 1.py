@@ -15,4 +15,4 @@ with open('magicaPotions.csv', 'w', encoding='UTF-8') as fo:
     for i in sl:
         answer = ','.join([str(i), str(sl[i])])
         print(answer, file=fo)
-№Вписываю ответ
+#Вписываю ответ
