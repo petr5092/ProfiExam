@@ -12,7 +12,7 @@ def binary_search(lst, cur):
         else:
             r = mid - 1
     return answer
-
+#Использую бинарный поиск, который получает lst - отсортированный список, cur - значение которое надо найти
 
 cur = ''
 while cur != 'стоп':
@@ -28,7 +28,9 @@ while cur != 'стоп':
     data.pop(0)
     data.sort(key=lambda x: x[2])
     fake_data.sort(key=lambda x: x[2])
-    answer = binary_search(data, 'Трава удачи четырехлистника')
+    #Создаю и сортирую список со всеми значениями
+    answer = binary_search(data, cur)
+    #Использую бинарный поиск
     mina = float('inf')
     if answer:
         for i in answer:
@@ -36,5 +38,8 @@ while cur != 'стоп':
                 mina = int(fake_data[i][1])
                 answer1 = fake_data[i]
         print(f'{cur} используется в {answer1[0]}, его количество составляет : {answer1[1]}')
-    else:
+    elif cur != 'стоп':
         print('Такую траву мы не используем')
+    
+    
+    #Записываю ответ
